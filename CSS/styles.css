@@ -333,7 +333,7 @@ footer {
 }
 .card img{
     width: 100%;
-    height: 550px;
+    height: 450px;
 }
 .card .contenido{
     padding: 15px;
@@ -354,6 +354,11 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: relative;
+    transition: all 300ms;
+}
+.gallery--img:hover{
+    transform: scale(1.15);
 }
 .gallery--img:nth-child(4) {
     grid-column-start: span 2;
