@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Philosopher:ital@1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Cinzel Decorative', cursive;
+    font-family: 'Philosopher', sans-serif;
+}
+
+
+.Conteiner {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-rows: repeat(3, 1fr) 100px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "header header header"
+        "header header header"
+        "header header header"
+        "footer footer footer"
+    ;
+
+    background-image: url(../Assets/imágenes/caballos-sierra1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    
+}
+header {
+    grid-area: header;
+    display: grid;
+
+}
+.firmadigital{
+    width: 600px;
+    height: 350px;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 10px;
+
+}
+header div h1 {
+    font-size: 64px;
+    font-family: 'Philosopher';
+    font-weight: lighter;
+    word-spacing: 20px;
+    letter-spacing: 10px;
+    color: white;
+}
+
+header div h2 {
+    font-size: 50px;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: lighter;
+    color: white;
+}
+
+footer {
+    grid-area: footer;
+    display: grid;
+    align-items: flex-start;
+    justify-content: center;
+    
+}
+
+.redes {
+    letter-spacing: 20px;
+}
+
+.redes img {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+}
+
+.MenuPrincipal {
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    column-gap: 25px;
+}
+
+.MenuPrincipal li {
+    list-style: none;
+}
+
+.MenuPrincipal li a {
+    text-decoration: none;
+    font-family: 'Cinzel Decorative', cursive;
+    color: white;
+}
+
+.MenuPrincipal li a:hover {
+    color: rgb(10, 10, 10);
+    cursor: pointer;
+}
+/*HEADERPAGINAS ES IGUAL EN TODAS LAS PAGINAS MENOS EN EL INDEX O INICIO*/
+.headerPaginas{
+    height: 150px;
+    background-color: black;
+    padding: 0 50px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 200px;
+    height: auto;
+}
+.navBar a{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.mostrar-navBar,
+.esconder-navBar{
+    font-size: 30px;
+    cursor: pointer;
+    display:none;
+    transition: 0.4s;
+}
+.mostrar-navBar{
+    order: 1;
+}
+
+.navBar a:hover,
+.mostrar-navBar:hover,
+.esconder-navBar:hover{
+    color: aqua;
+}
+#check{
+    display: none;
+}
+/*BANNER*/
+
+#banner{
+    padding: 0px 50px;
+    background-image: url(../Assets/imágenes/yo.JPG);
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+}
+#banner::before{
+    content: "" ;
+    background: rgba(77,77,92, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    left: 0;
+}
+
+.contenido-banner{
+    font-size: 20px;
+    padding: 20px 0px;
+    position: relative;
+    color: white;
+    height: 100%;
+    text-align: justify;
+    font-family: 'Cinzel Decorative';
+    font-weight: bold;
+    letter-spacing: 4px;
+    line-height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*FOOTER ES IGUAL EN TODAS LAS PAGINAS MENOS INDEX O INICIO*/
+.footerPaginas{
+    background-color: black;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 20px;
+}
+.redesPaginas img{
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+}
+
+
+/* RESPONSIVE*/
+@media(max-width: 768px){
+    /*headerPaginas*/
+    .mostrar-navBar,
+    .esconder-navBar{
+        display: block;
+    }
+
+    .navBar{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: gray;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 150px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+    .navBar a{
+        display: block;
+        padding: 20px;
+    }
+    .esconder-navBar{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked~ .navBar{
+        right: 0;
+    }
+    .contenido-banner{
+        font-size: 18px;
+    }
+}
+@media(max-width: 576px){
+    .contenido-banner{
+        font-size: 16px;
+    }
+    
+    .redesPaginas img{
+        display: block;
+        padding: 5px;
+        
+    }
+}
+/*Página Contacto*/
+
+.mainContacto{
+    background-image: url(../Assets/imágenes/Horseshoe-bend.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.contenedor form .form-header .form-titulo{
+    font-weight: normal;
+    font-family: sans-serif;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding: 14px 0px;
+}
+.contenedor{
+    background: rgba(0,0,0,.6);
+    width: 70%;
+    max-width: 600px;
+    margin: auto;
+    padding: 35px 35px;
+    border-radius: 6px;
+    
+}
+
+.contenedor form label{
+    color: white;
+    font-size: 16px;
+    font-family: sans-serif;
+    
+}
+.contenedor form input, .form-textarea {
+    background: rgba(248, 244, 244, 0.932);
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    font-size: 14px;
+    color: black;
+    font-family: sans-serif;
+
+}
+.contenedor form .btn-submit{
+    font-family: sans-serif;
+    outline: none;
+    background: rgb(92, 212, 212);
+    font-size: 16px;
+    border: none;
+    color: white;
+    padding: 15px 0px;
+    cursor: pointer;
+}
+/*Página Cuadros*/
+
+.mainCuadros{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+.containerCuadros{
+    width: 100%;
+    display: flex;
+    max-width: 1500px;
+}
+.card{
+    width: 100%;
+    height: 70vh;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0px 1px 10px rgba(0,0,0,.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,.4);
+    transform: translateY(-4%);
+}
+.card img{
+    width: 100%;
+    height: 550px;
+}
+.card .contenido{
+    padding: 15px;
+    text-align: center;
+}
+.card .contenido p{
+    line-height: 1.5;
+    color: gray;
+}
+/* Página fotos responsive*/
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+}
+.gallery--img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery--img:nth-child(4) {
+    grid-column-start: span 2;
+}
+.gallery--img:nth-child(8) {
+    grid-row-start: span 2;
+}
+.gallery--img:nth-child(9) {
+    grid-column-start: span 2;
+}
+/* Responsive de mobile a tablet*/
+
+@media(min-width: 768px){
+    
+    .gallery-container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .gallery--img:nth-child(1) {
+        grid-column-start: span 2;
+    }
+    .gallery--img:nth-child(2) {
+        grid-column-start: span 2;
+    }
+    .gallery--img:nth-child(4) {
+        grid-column-start: span 2;
+    }
+    .gallery--img:nth-child(6) {
+        grid-column-start: span 2;
+    }
+    .gallery--img:nth-child(9) {
+        grid-column-start: span 3;
+    }
+
+}
+
+/*Responsive de tablet a desktop*/
+
+@media(min-width: 1024px){
+    
+    .gallery-container{
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .gallery--img:nth-child(1) {
+        grid-column-start: span 2;
+    }
+    .gallery--img:nth-child(2) {
+        grid-row-start: span 2;
+    }
+    .gallery--img:nth-child(4) {
+        grid-column-start: span 2;
+    }
+    .gallery--img:nth-child(6) {
+        grid-column-start: span 3;
+    }
+    .gallery--img:nth-child(9) {
+        grid-column-start: span 4;
+    }
+
+}
+
+
+
+
+

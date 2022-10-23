@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body>
+    <header class="headerPaginas">
+        <img class="logo" src="../Assets/imágenes/Firma-digital.png">
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar-navBar">
+            &#8801
+        </label>
+        <nav class="navBar">
+            <a href="../index.html">Inicio</a>
+            <a href="./cuadros.html">Cuadros</a>
+            <a href="./fotos.html">fotos</a>
+            <a href="./acerca.html">Acerca</a>
+            <label for="check" class="esconder-navBar">
+                &#215
+            </label>
+        </nav>
+    </header>
+    <main class="mainContacto">
+        <section>
+            <div class="contenedor">
+                <form>
+                    <div class="form-header">
+                        <h1 class="form-titulo">Contacto</h1><br>
+                    </div>
+
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" name="nombre" id="nombre"><br><br>
+                    
+                    <label for="apellido">Apellido:</label><br>
+                    <input type="text" name="apellido" id="apellido"><br><br>
+
+                    <label for="correo">Correo Electronico:</label><br>
+                    <input type="text" name="correo" id="correo"><br><br>
+
+                    <label for="mensaje">Mensaje:</label><br>
+                    <textarea name="mensaje" class="form-textarea" placeholder="Aqui escriba su mensaje"></textarea><br><br>
+
+                    <input type="submit" class="btn-submit" value="Enviar Consulta"><br>
+                </form>
+            </div>
+        </section>
+    </main>
+        <footer class="footerPaginas">
+            <div class="redesPaginas">
+                <img class="instagram" src="../Assets/imágenes/instagram.jpg">
+                <img class="facebook" src="../Assets/imágenes/facebook.jpg">
+            </div>
+        </footer>
+</body>
+</html>
